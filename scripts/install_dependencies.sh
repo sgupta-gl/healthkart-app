@@ -2,7 +2,7 @@
 # This script will install Docker on the EC2 instance
 
 # Define log file
-mkdir -p /home/ec2-user/app/logs
+sudo mkdir -p /home/ec2-user/app/logs
 LOG_FILE="/home/ec2-user/app/logs/install_dependencies.log"
 # Start logging
 echo "Starting dependency installation: $(date)" >> $LOG_FILE
