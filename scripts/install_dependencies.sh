@@ -2,6 +2,11 @@
 
 # This script installs Docker, Node.js, and app dependencies on the EC2 instance
 
+#!/bin/bash
+
+echo "Cleaning up old app directory..."
+sudo rm -rf /home/ec2-user/app/*
+
 # Define log file
 LOG_FILE="/home/ec2-user/app/logs/install_dependencies.log"
 APP_DIR="/home/ec2-user/app"
