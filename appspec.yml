@@ -4,13 +4,15 @@ os: linux
 files:
   - source: /
     destination: /home/ec2-user/my-app
+    exclude:
+     - package-lock.json
 
 hooks:
   BeforeInstall:
     - location: scripts/remove_package_lock.sh
       timeout: 300
       runas: ec2-user
-      
+
     - location: scripts/install_dependencies.sh
       timeout: 300
       runas: ec2-user
