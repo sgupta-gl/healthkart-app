@@ -1,5 +1,5 @@
 #!/bin/bash
-cd /home/ec2-user/node-app
+cd /home/ec2-user/app
 echo "Running tests..."
 npm test  # Or any command you use to run your tests (e.g., `jest`, `mocha`)
 if [ $? -eq 0 ]; then
