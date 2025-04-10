@@ -1,5 +1,6 @@
 #!/bin/bash
 # Define log file
+mkdir -p /home/ec2-user/app/logs
 LOG_FILE="/home/ec2-user/app/logs/run_tests.log"
 
 # Start logging
