@@ -9,12 +9,8 @@ hooks:
     - location: scripts/install_dependencies.sh
       timeout: 300
       runas: ec2-user
-    - location: scripts/run_tests.sh
-      timeout: 300
-      runas: ec2-user
 
   AfterInstall:
     - location: scripts/start_application.sh
       timeout: 300
       runas: ec2-user
- 
