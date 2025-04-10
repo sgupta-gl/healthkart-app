@@ -12,6 +12,5 @@ sudo yum update -y
 sudo yum install -y docker
 sudo service docker start
 sudo usermod -a -G docker ec2-user  # Add ec2-user to docker group to run Docker without sudo
-mkdir -p /home/ec2-user/app
 cd /home/ec2-user/app
 sudo npm install express
