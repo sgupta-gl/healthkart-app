@@ -14,4 +14,4 @@ sudo yum install -y docker
 sudo service docker start
 sudo usermod -a -G docker ec2-user  # Add ec2-user to docker group to run Docker without sudo
 cd /home/ec2-user/app
-sudo npm install express
+sudo npm install express >> "$LOG_FILE" 2>&1

@@ -10,8 +10,8 @@ cd /home/ec2-user/app
 echo "Running tests..."
 npm test  # Or any command you use to run your tests (e.g., `jest`, `mocha`)
 if [ $? -eq 0 ]; then
-  echo "Tests passed."
+  echo "Tests passed." >> "$LOG_FILE" 2>&1
 else
-  echo "Tests failed."
+  echo "Tests failed." >> "$LOG_FILE" 2>&1
   exit 1  # This will fail the deployment if tests fail
 fi
