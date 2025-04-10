@@ -9,7 +9,11 @@ hooks:
     - location: scripts/install_dependencies.sh
       timeout: 300
       runas: ec2-user
-      
+    
+    - location: scripts/clean_up.sh  # Optional, clean up any unused Docker resources (old containers, volumes, etc.)
+      timeout: 300
+      runas: ec2-user
+
   AfterInstall:
     - location: scripts/start_application.sh
       timeout: 300
@@ -24,7 +28,5 @@ hooks:
       timeout: 300
       runas: ec2-user
 
-  ValidateService:
-    - location: scripts/clean_up.sh  # Optional, clean up any unused Docker resources (old containers, volumes, etc.)
-      timeout: 300
-      runas: ec2-user
+  #ValidateService:
+    
