@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Define log file
-LOG_FILE="/home/ec2-user/app/logs/run_tests.log"
-APP_DIR="/home/ec2-user/app"
+LOG_FILE="/home/ec2-user/my-app/logs/run_tests.log"
+APP_DIR="/home/ec2-user/my-app"
 
 # Ensure the log directory exists
 mkdir -p "$(dirname "$LOG_FILE")"

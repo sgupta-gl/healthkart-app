@@ -5,11 +5,11 @@
 #!/bin/bash
 
 echo "Cleaning up old app directory..."
-sudo rm -rf /home/ec2-user/app/*
+sudo rm -rf /home/ec2-user/my-app/*
 
 # Define log file
-LOG_FILE="/home/ec2-user/app/logs/install_dependencies.log"
-APP_DIR="/home/ec2-user/app"
+LOG_FILE="/home/ec2-user/my-app/logs/install_dependencies.log"
+APP_DIR="/home/ec2-user/my-app"
 
 # Ensure log directory exists
 mkdir -p "$(dirname "$LOG_FILE")"
