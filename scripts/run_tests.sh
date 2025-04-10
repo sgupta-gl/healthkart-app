@@ -1,4 +1,10 @@
 #!/bin/bash
+# Define log file
+LOG_FILE="/home/ec2-user/app/logs/run_tests.log"
+
+# Start logging
+echo "Running tests: $(date)" >> $LOG_FILE
+
 cd /home/ec2-user/app
 echo "Running tests..."
 npm test  # Or any command you use to run your tests (e.g., `jest`, `mocha`)

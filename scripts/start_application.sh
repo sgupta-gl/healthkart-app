@@ -1,4 +1,10 @@
 #!/bin/bash
+# Define log file
+LOG_FILE="/home/ec2-user/app/logs/start_application.log"
+
+# Start logging
+echo "Starting application: $(date)" >> $LOG_FILE
+
 # This script builds and starts the Docker container with your app
 cd /home/ec2-user/app
 # Remove any previous container (if it exists) to avoid conflicts

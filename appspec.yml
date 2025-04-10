@@ -14,3 +14,9 @@ hooks:
     - location: scripts/start_application.sh
       timeout: 300
       runas: ec2-user
+      
+ # Add the new hook to run tests after installation and before the app is started
+  AfterInstallTests:
+    - location: scripts/run_tests.sh
+      timeout: 300
+      runas: ec2-user
